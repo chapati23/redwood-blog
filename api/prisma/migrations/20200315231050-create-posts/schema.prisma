@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url = env("DATABASE_URL")
+  url = "***"
 }
 
 generator photonjs {
@@ -12,13 +12,5 @@ model Post {
   id        String @id @default(uuid())
   title     String
   body      String
-  createdAt DateTime @default(now())
-}
-
-model Contact {
-  id String @id @default(cuid())
-  name String
-  email String
-  message String
   createdAt DateTime @default(now())
 }
